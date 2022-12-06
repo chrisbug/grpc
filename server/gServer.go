@@ -83,7 +83,7 @@ func (RandomServer) GetRandom(ctx context.Context, r *protoapi.RandomParams) (*p
 
 func (RandomServer) GetRandomPass(ctx context.Context, r *protoapi.RequestPass) (*protoapi.RandomPass, error) {
 	rand.Seed(r.GetSeed())
-	temp := getString(r.GetLength())
+	temp := getString(r.Lenght)
 
 	response := &protoapi.RandomPass{
 		Password: temp,

@@ -7,14 +7,14 @@ import (
 	"os"
 	"time"
 
-	"github.com/chrisbug/protapi"
+	"github.com/chrisbug/protoapi"
 	"google.golang.org/grpc"
 )
 
 var port = ":8080"
 
-func AskingDateTime(ctx context.Context, m protoapi.RandomClient) (*protoapi,DateTime, error) {
-	request :=  &protapi.RequestDateTime {
+func AskingDateTime(ctx context.Context, m protoapi.RandomClient) (*protoapi.DateTime, error) {
+	request :=  &protoapi.RequestDateTime {
 		Value: "Please send me the date and time",
 	}
 
